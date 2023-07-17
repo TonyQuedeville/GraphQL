@@ -1,0 +1,490 @@
+@charset "UTF-8";
+/*  Tony Quedeville : tquedevi
+ *  Zone01: Projet Univers 01
+ *  20-02-2023
+ *  */
+/* Utils (variables, mixin, fonction, %placeholder pour extend) */
+/*  Tony Quedeville : tquedevi
+ *  Zone01: Projet Univers 01
+ *  20-02-2023
+ *  */
+/*import "sass/Utils/_fonctions.sass"*/
+/*  Tony Quedeville : tquedevi
+ *  Zone01: Projet Univers 01
+ *  20-02-2023
+ *  */
+/*import "sass/Utils/_placeholders.sass"*/
+/* Thèmes */
+/* Vendors (bootsrtap, jquery, ...) */
+/* Base (police, norme, box-sizing, ...) */
+/*  Tony Quedeville : tquedevi
+ *  Zone01: Projet Univers 01
+ *  20-02-2023
+ *  */
+html, body {
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  background: linear-gradient(0deg, rgb(1, 9, 17) 0%, rgb(8, 42, 58) 50%, rgb(1, 9, 17) 100%);
+}
+
+#galaxy01 {
+  z-index: 1;
+  position: absolute;
+  left: -20%;
+  top: 0%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, 0.4745098039);
+  width: 120vw;
+  height: 95vh;
+  opacity: 0.1;
+  -webkit-animation: galaxy-rotate 200s linear infinite;
+          animation: galaxy-rotate 200s linear infinite;
+  position: fixed;
+}
+
+h1, h2, h3, h4, h5, h6, label, p, a {
+  font-family: Bookman Old Style;
+  text-shadow: 0.5rem, 0.5rem, rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  margin: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4, input, label {
+  font-size: 1.2rem;
+}
+
+h5, p, a {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.7rem;
+}
+
+/* Layout (header, footer, main, ...) */
+/*  Tony Quedeville : tquedevi
+ *  Zone01: Projet Univers 01
+ *  20-02-2023
+ *  */
+nav {
+  width: 99.2%;
+  height: 48px;
+  margin: 5px 5px;
+  background: linear-gradient(0deg, rgba(9, 58, 87, 0.938) 0%, rgb(6, 21, 31) 100%);
+  box-shadow: 6px 6px 15px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  position: fixed;
+  z-index: 9999;
+}
+
+footer {
+  width: 99.2%;
+  height: 48px;
+  margin: 5px 5px;
+  background: linear-gradient(0deg, rgba(9, 58, 87, 0.938) 0%, rgb(6, 21, 31) 100%);
+  box-shadow: 6px 6px 15px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  z-index: 9999;
+}
+
+main {
+  display: flex;
+  padding-top: 54px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  width: 40wv;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icn {
+  box-shadow: 6px 6px 15px 4px rgba(0, 0, 0, 0.5);
+}
+.icn:hover {
+  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.infobulle {
+  position: relative;
+  cursor: help;
+}
+.infobulle:hover::after, .infobulle:focus::after {
+  content: attr(aria-label);
+  position: absolute;
+  align-items: left;
+  top: 1.5em;
+  left: 100%;
+  white-space: nowrap;
+  z-index: 1;
+  padding: 5px;
+  background: linear-gradient(0deg, rgba(21, 73, 97, 0.466) 0%, rgba(2, 22, 32, 0.774) 100%);
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
+  color: rgb(255, 255, 255);
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(0deg, rgba(21, 73, 97, 0.466) 0%, rgba(2, 22, 32, 0.774) 100%);
+  box-shadow: 6px 6px 15px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.anim {
+  transition: transform 0.4s ease;
+  transform: scale(0.8);
+}
+.anim:hover {
+  transform: scale(0.9) rotate(2deg);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  margin: 10px 10px;
+  padding: 7px 10px;
+  background: linear-gradient(0deg, rgba(20, 39, 51, 0.952) 0%, rgba(11, 73, 109, 0.959) 100%);
+  box-shadow: 6px 6px 15px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+}
+.button:hover {
+  background: linear-gradient(0deg, rgb(27, 60, 82) 0%, rgb(8, 26, 41) 100%);
+  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+.button:disabled {
+  color: rgb(255, 255, 255);
+}
+
+select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  margin: 10px 10px;
+  padding: 7px 10px;
+  background: linear-gradient(0deg, rgba(20, 39, 51, 0.952) 0%, rgba(11, 73, 109, 0.959) 100%);
+  box-shadow: 6px 6px 15px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: black;
+}
+select:hover {
+  background: linear-gradient(0deg, rgb(27, 60, 82) 0%, rgb(8, 26, 41) 100%);
+  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+input {
+  height: 30px;
+  margin: 10px 10px;
+  background: linear-gradient(0deg, rgba(20, 39, 51, 0.952) 0%, rgba(11, 73, 109, 0.959) 100%);
+  box-shadow: 6px 6px 15px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  font-family: Bookman Old Style;
+  color: rgb(255, 255, 255);
+  padding-left: 10px;
+  color: rgb(194, 197, 24);
+}
+input:hover {
+  background: linear-gradient(0deg, rgb(27, 60, 82) 0%, rgb(8, 26, 41) 100%);
+  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+input[type=number] {
+  width: 4rem;
+  height: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+.number {
+  width: 60px;
+  color: rgb(255, 255, 255);
+}
+
+.checkbox {
+  width: 11vw;
+  height: 35px;
+  background: linear-gradient(0deg, rgba(21, 73, 97, 0.466) 0%, rgba(2, 22, 32, 0.774) 100%);
+  box-shadow: 6px 6px 15px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+  color: rgb(55, 73, 2);
+}
+.checkbox:hover {
+  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.checked {
+  color: rgb(255, 255, 255);
+}
+
+.graphique {
+  z-index: 3;
+  padding: 5px;
+  margin: 5px;
+  background: linear-gradient(0deg, rgba(21, 73, 97, 0.466) 0%, rgba(2, 22, 32, 0.774) 100%);
+  box-shadow: 6px 6px 15px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.grille {
+  border-radius: 0.5rem;
+}
+
+.groupPoint {
+  transition: 250ms;
+}
+.groupPoint:hover {
+  cursor: default;
+}
+.groupPoint:hover .hoverCircle {
+  filter: drop-shadow(0px 0px 4px rgb(255, 255, 255));
+  r: 4px;
+  stroke-width: "1";
+  stroke: yellow;
+  fill: black;
+}
+.groupPoint:hover .hoverValue {
+  opacity: 1;
+  transform: translate(100, 70);
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  font-size: 8px;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  box-shadow: 6px 6px 15px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+#chartLevel {
+  order: 1;
+}
+
+#chartProgressXp {
+  order: 2;
+}
+
+#chartRatioUpDown {
+  order: 3;
+}
+
+#chartSkill {
+  order: 4;
+}
+
+/*  Tony Quedeville : tquedevi
+ *  Zone01: Projet Univers 01
+ *  20-02-2023
+ *  */
+@-webkit-keyframes galaxy-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes galaxy-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*  Tony Quedeville : tquedevi
+ *  Zone01: Projet Univers 01
+ *  20-02-2023
+ *  */
+#board {
+  width: 23vw;
+  height: 86vh;
+  margin: 5px 5px;
+  background: linear-gradient(0deg, rgba(13, 35, 44, 0.678) 0%, rgba(3, 16, 22, 0.158) 100%);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (orientation: landscape) {
+  #board {
+    width: 30vw;
+  }
+}
+@media screen and (orientation: portrait) {
+  #board {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 99%;
+    height: 40vh;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #infoBoard {
+    max-width: 90%;
+    height: 61%;
+  }
+}
+@media screen and (orientation: portrait) {
+  #infoBoard {
+    width: 45%;
+    min-height: 90%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #cmdBox {
+    max-width: 90%;
+    height: 39%;
+  }
+}
+@media screen and (orientation: portrait) {
+  #cmdBox {
+    width: 25%;
+    transform: scale(2);
+    margin-right: 20px;
+  }
+}
+
+#scoreboard {
+  width: 22vw;
+  margin: 5px 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.score-player {
+  width: 21vw;
+  height: 100%;
+  margin: 2px 5px;
+  background: linear-gradient(0deg, rgb(2, 13, 14) 0%, rgb(3, 31, 30) 100%);
+  box-shadow: 6px 6px 15px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  transform: scale(0.95);
+}
+
+.result {
+  width: 100%;
+}
+
+#resultLevel {
+  max-width: 96%;
+  max-height: 38%;
+  overflow: auto;
+  background: linear-gradient(0deg, rgba(13, 35, 44, 0.678) 0%, rgba(3, 16, 22, 0.158) 100%);
+  box-shadow: 6px 6px 15px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+}
+
+.cmd {
+  transition: 100ms;
+  width: 25%;
+}
+.cmd:hover {
+  scale: 1.2;
+}
+
+#cmdRestart {
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  margin: 5px;
+  padding: 5px 10px;
+  background: linear-gradient(0deg, rgba(13, 35, 44, 0.678) 0%, rgba(3, 16, 22, 0.158) 100%);
+  box-shadow: 6px 6px 15px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  transition: 100ms;
+}
+#cmdRestart:hover {
+  scale: 1.1;
+}
+
+#cmdHaut, #cmdBas {
+  rotate: 270deg;
+  margin: 10px;
+}
+
+/* Pages (specifique à la page) */
+/* Components (button, select, input, ... ) */
+/*  Tony Quedeville : tquedevi
+ *  Zone01: Projet 
+ *  28-03-2023
+ *  *//*# sourceMappingURL=style.css.map */

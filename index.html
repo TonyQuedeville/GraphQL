@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>GraphQL</title>
+    <link rel="icon" type="image/png" href="./static/icn/icn-STS.png"/>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+
+<body> 
+    <img id="galaxy01" src="./static/img/Galaxy01.png">
+    
+    <nav id="identification" class="horizontal">
+        <div class="horizontal center">
+            <img id="logoZone01" src="./static/img/logoZone01.png" height="30">
+        </div>
+        <div class="horizontal center">
+            <p>Login</p>
+            <input type="text" id="login">
+            <p>mot de passe</p>
+            <input type="password" id="password">
+            <p>n° :</p>
+            <p id="loginId"></p>
+            <p id="firstName"></p>
+            <p id="lastName"></p>
+            <div id="logout" class="button">Logout</div>
+        </div>
+    </nav>
+
+    <main id="infoUser" class="vertical center">
+        <div id="chartLevel" class="graphique"></div>   
+        <div id="chartProgressXp" class="graphique"></div>   
+        <div id="chartRatioUpDown" class="graphique"></div>   
+        <div id="chartSkill" class="graphique"></div>        
+    </main>
+    
+    <!-- Pied de page -->
+    <footer>
+        <p>Zone 01 - Tony Quedeville : </p>
+        <p>23/03/2023</p>
+        <p>Projet : Graphql</p>
+        <a href="" class="infobulle anim" target="_blank" aria-label="GitHub: Graphql" alt="Lien vers le projet Git Graphql">
+            <div class="logo">
+                <img src="./static/icn/icn-STS-blanc.png" width="25" height="25" alt="Logo STS">
+            </div>
+        </a>
+    </footer>
+    <!----> 
+    
+    <!-- Script JS 
+        <script src="https://unpkg.com/jsonwebtoken@8.5.1/dist/jsonwebtoken.min.js"></script>
+        <script src="https://unpkg.com/jsonwebtoken@10.1.1/dist/jsonwebtoken.min.js"></script>
+        <script src="https://unpkg.com/jsonwebtoken/dist/jsonwebtoken.min.js"></script>
+        <script src="./jsonwebtoken.min.js"></script>
+        <script src="jsonwebtoken.min.js" type="application/javascript"></script>
+        <script src="./node_modules/jsonwebtoken/dist/jsonwebtoken.min.js"></script>
+    -->  
+    
+    <script src="./globals.js"></script>      
+    <script src="./graphSVG.js"></script>      
+    <script src="./graphql.js"></script>      
+    <!--
+    --> 
+</body>
+    
+</html>

@@ -1,0 +1,46 @@
+/*
+    Tony Quedeville : tquedevi
+    Zone01: Projet Univers 01
+    20-02-2023
+    */
+
+html, body
+    max-width: 100vw
+    height: 100vh
+    margin: 0px
+    background: $fondBlack
+    //background-size: cover
+    //position: fixed
+    //overflow: hidden
+
+#galaxy01
+    z-index: 1
+    position: absolute
+    left: -20%
+    top: 0%
+    border-radius: $rond
+    box-shadow: $softLight
+    width: 120vw
+    height: 95vh
+    opacity: 0.1
+    animation: galaxy-rotate 200s linear infinite
+    position: fixed
+
+h1, h2, h3, h4, h5, h6, label, p, a  
+    font-family: Bookman Old Style
+    text-shadow: 0.5rem, 0.5rem, rgba(0, 0, 0, 1)
+    color: $white
+    margin: 10px
+
+h1
+    font-size: nth($fontSizes, 1)
+h2
+    font-size: nth($fontSizes, 2)
+h3
+    font-size: nth($fontSizes, 3)
+h4 , input, label
+    font-size: nth($fontSizes, 4)
+h5, p, a
+    font-size: nth($fontSizes, 5)
+h6
+    font-size: nth($fontSizes, 6)

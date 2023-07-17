@@ -1,0 +1,184 @@
+/*
+    Tony Quedeville : tquedevi
+    Zone01: Projet Univers 01
+    20-02-2023
+    */
+
+nav  
+    @include navfoot
+    position: fixed
+    z-index: 9999
+
+footer
+    @include navfoot
+    z-index: 9999
+
+main
+    //z-index: 1
+    display: flex
+    //width: 100%
+    //max-height: 87%
+    padding-top: 54px
+    margin-bottom: 10px
+    justify-content: center
+    //overflow-x: hidden
+    //overflow-y: auto
+
+.title
+    font-size: nth($fontSizes, 3)
+    color: $white
+    width: 40wv
+    display: flex
+    justify-content: center
+    align-items: center
+
+.vertical
+    flex-direction: column
+
+.horizontal
+    display: flex
+    flex-direction: row
+
+.center
+    display: flex
+    justify-content: center
+    align-items: center
+
+.icn
+    box-shadow: $shadow
+    &:hover 
+        box-shadow: $light
+        cursor: pointer
+
+.infobulle  
+    position: relative 
+    cursor: help
+
+    &:hover::after,
+    &:focus::after 
+        content: attr(aria-label)
+        position: absolute
+        align-items: left 
+        top: 1.5em
+        left: 100%
+        white-space: nowrap
+        z-index: 1
+        padding: 5px
+        background: $fondContainer
+        border-radius: $radius
+        box-shadow: $light
+        color: $white
+
+.logo
+    width: 35px
+    height: 35px
+    background: $fondContainer
+    box-shadow: $shadow
+    border-radius: $radius
+    margin: 10px
+    display: flex
+    align-items: center
+    justify-content: space-around
+    align-content: center
+
+.anim
+    transition: transform .4s ease
+    transform: scale(.8)
+
+    &:hover
+        transform: scale(.9) rotate(2deg)
+
+.button
+    @include buttonSelect
+
+    &:disabled
+        color: $white
+
+select
+    @include buttonSelect
+    font-size: nth($fontSizes, 4)
+    color: black
+
+input
+    @include input
+    padding-left: 10px
+    color: $yellow
+
+input[type="number"]
+    width: 4rem
+    height: 2rem
+    color: $white
+    //font-size: nth($fontSizes, 2)
+
+.number
+    width: 60px
+    color: $white
+
+.checkbox
+    width: 11vw
+    height: 35px
+    background: $fondContainer
+    box-shadow: $shadow
+    border-radius: $radius
+    margin: 5px
+    display: flex
+    align-items: center
+    justify-content: space-around
+    align-content: center
+    color: $green
+
+    &:hover
+        box-shadow: $light
+        cursor: pointer
+
+.checked
+    color: $white
+
+
+//-----------------------------------------------------------------------------------------------------------
+.graphique
+    z-index: 3
+    padding: 5px
+    margin: 5px
+    background: $fondContainer
+    box-shadow: $shadow
+    border-radius: $radius
+    border: $borderWhite
+
+.grille
+    //background: $fondContainerTransRadial
+    border-radius: $radius
+    //border: $borderWhite
+
+.groupPoint
+    transition: 250ms
+    &:hover
+        cursor: default
+        .hoverCircle
+            filter: drop-shadow(0px 0px 4px rgb(255, 255, 255))
+            r: 4px
+            stroke-width: "1"
+            stroke: yellow
+            fill: black
+        .hoverValue
+            opacity: 1
+            transform: translate(100, 70) 
+
+.circle
+    width: 10px
+    height: 10px
+    font-size: 8px
+    text-align: center
+    background: $white
+    box-shadow: $shadow
+    border-radius: $rond
+    border: $borderWhite
+
+#chartLevel
+    order: 1
+#chartProgressXp
+    order: 2
+#chartRatioUpDown
+    order: 3
+#chartSkill
+    order: 4
