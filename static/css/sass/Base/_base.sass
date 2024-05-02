@@ -11,7 +11,7 @@ html, body
     background: $fondBlack
     //background-size: cover
     //position: fixed
-    //overflow: hidden
+    // overflow: hidden
 
 #galaxy01
     z-index: 1
@@ -34,13 +34,34 @@ h1, h2, h3, h4, h5, h6, label, p, a
 
 h1
     font-size: nth($fontSizes, 1)
+    // +portrait 
+    //     font-size: nth($mobilfontSizes, 1)
 h2
     font-size: nth($fontSizes, 2)
+    // +portrait 
+    //     font-size: nth($mobilfontSizes, 2)
 h3
     font-size: nth($fontSizes, 3)
-h4 , input, label
+    // +portrait 
+    //     font-size: nth($mobilfontSizes, 3)
+h4
     font-size: nth($fontSizes, 4)
+    // +portrait 
+    //     font-size: nth($mobilfontSizes, 4)
 h5, p, a
     font-size: nth($fontSizes, 5)
+    // +portrait 
+    //     font-size: nth($mobilfontSizes, 5)
 h6
     font-size: nth($fontSizes, 6)
+    // +portrait 
+    //     font-size: nth($mobilfontSizes, 6)
+
+input
+    font-size: nth($fontSizes, 4)
+    +portrait
+        font-size: nth($mobilfontSizes, 2)
+label
+    font-size: nth($fontSizes, 5)
+    +portrait
+        font-size: nth($mobilfontSizes, 2)

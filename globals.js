@@ -21,6 +21,7 @@ let token = ""
 document.getElementById("logout").addEventListener("click", e => {
     window.location.reload()
     localStorage.clear()
+    // document.getElementById("login-password").hidden = false
 })
 
 document.getElementById("login").addEventListener("change", e => {
@@ -29,7 +30,7 @@ document.getElementById("login").addEventListener("change", e => {
     if(password != ""){
         //console.log("password !", password, "login !", login);
         response = getLogin(login, password)
-        console.log(response)
+        // console.log(response)
         .then(data =>{
             token = data;
             //console.log("token:", token);
@@ -41,6 +42,7 @@ document.getElementById("login").addEventListener("change", e => {
         })
     }
 })
+
 document.getElementById("password").addEventListener("change", e => {
     password = e.target.value
     login = document.getElementById("login").value
@@ -56,7 +58,7 @@ document.getElementById("password").addEventListener("change", e => {
                 createChart("Skill", "", 0, 0)
             } else {
                 token = data;
-                console.log("token:", token);
+                // console.log("token:", token);
                 localStorage.setItem('token', token);
                 getUser()
             }

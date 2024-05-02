@@ -32,12 +32,20 @@ function getUser(){
     `
     const objUser = apiFetch(rq)
     objUser.then((infoUser)=> {
-        //console.log(infoUser.data.user)
+        // console.log(infoUser.data.user)
         userId = infoUser.data.user[0].id
+        document.getElementById("login-password").style.display = "none"
+        document.getElementById("logout").style.display = "flex"
+        document.getElementById("chartLevel").style.display = "flex"
+        document.getElementById("chartProgressXp").style.display = "flex"
+        document.getElementById("chartRatioUpDown").style.display = "flex"
+        document.getElementById("chartSkill").style.display = "flex"
+
         document.getElementById("login").value = infoUser.data.user[0].login
         document.getElementById("loginId").textContent = infoUser.data.user[0].id
         document.getElementById("firstName").textContent = infoUser.data.user[0].firstName
         document.getElementById("lastName").textContent = infoUser.data.user[0].lastName
+
 
         let limit = 200
         let offset = 0
@@ -278,11 +286,11 @@ function getTransactionLevel(id, typeObject, limit, offset){
             //console.log("TransactionsLevel:", TransactionsLevel);
             level= maxiLevel(TransactionsLevel)
             //console.log("level : ", level)
-            createChart("Level", "Level", "height", 25)
+            createChart("Level", "Level", "height", 35)
             createGraphLevel("Level", level)
 
             const b = () =>{
-                createChart("Level", "Level", "height", 25)
+                createChart("Level", "Level", "height", 35)
                 createGraphLevel("Level", level)
             }
             window.addEventListener('resize', b)

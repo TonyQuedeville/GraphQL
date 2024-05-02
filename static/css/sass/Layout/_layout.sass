@@ -1,6 +1,6 @@
 /*
     Tony Quedeville : tquedevi
-    Zone01: Projet Univers 01
+    Zone01: Projet GraphQL
     20-02-2023
     */
 
@@ -8,6 +8,10 @@ nav
     @include navfoot
     position: fixed
     z-index: 9999
+
+    // +medium
+
+    // +portrait
 
 footer
     @include navfoot
@@ -103,6 +107,8 @@ input
     @include input
     padding-left: 10px
     color: $yellow
+    +portrait
+        height: 5rem
 
 input[type="number"]
     width: 4rem
@@ -138,6 +144,7 @@ input[type="number"]
 //-----------------------------------------------------------------------------------------------------------
 .graphique
     z-index: 3
+    height: fit-content
     padding: 5px
     margin: 5px
     background: $fondContainer

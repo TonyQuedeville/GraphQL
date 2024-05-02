@@ -15,31 +15,35 @@
         <div class="horizontal center">
             <img id="logoZone01" src="./static/img/logoZone01.png" height="30">
         </div>
+
         <div class="horizontal center">
-            <p>Login</p>
-            <input type="text" id="login">
-            <p>mot de passe</p>
-            <input type="password" id="password">
             <p>n° :</p>
             <p id="loginId"></p>
             <p id="firstName"></p>
             <p id="lastName"></p>
-            <div id="logout" class="button">Logout</div>
+            <div id="logout" class="button" style="display:none" >Logout</div>
         </div>
     </nav>
 
     <main id="infoUser" class="vertical center">
-        <div id="chartLevel" class="graphique"></div>   
-        <div id="chartProgressXp" class="graphique"></div>   
-        <div id="chartRatioUpDown" class="graphique"></div>   
-        <div id="chartSkill" class="graphique"></div>        
+        <div id="login-password" class="vertical center" style="z-index: 9999;">
+            <label>Login</label>
+            <input type="text" id="login">
+            <label>mot de passe</label>
+            <input type="password" id="password">
+        </div>
+
+        <div id="chartLevel" class="graphique" style="display:none"></div>   
+        <div id="chartProgressXp" class="graphique" style="display:none"></div>   
+        <div id="chartRatioUpDown" class="graphique" style="display:none"></div>   
+        <div id="chartSkill" class="graphique" style="display:none"></div>        
     </main>
     
     <!-- Pied de page -->
     <footer>
-        <p>Zone 01 - Tony Quedeville : </p>
-        <p>23/03/2023</p>
-        <p>Projet : Graphql</p>
+        <h6>Zone 01 - Tony Quedeville : </h6>
+        <h6>23/03/2023</h6>
+        <h6>Projet : Graphql</h6>
         <a href="" class="infobulle anim" target="_blank" aria-label="GitHub: Graphql" alt="Lien vers le projet Git Graphql">
             <div class="logo">
                 <img src="./static/icn/icn-STS-blanc.png" width="25" height="25" alt="Logo STS">

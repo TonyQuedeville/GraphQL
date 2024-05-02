@@ -19,7 +19,7 @@ class Courbe extends GraphPoint{
 //*/
 
 /* Création d'un graphique */
-function createChart(chartName, titre, width = 60, height = 40){
+function createChart(chartName, titre, width = 92, height = 60){
     document.getElementById("chart" + chartName).remove()
     const chartContainer = document.createElement("div")
     chartContainer.id = "chart" + chartName
