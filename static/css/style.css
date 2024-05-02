@@ -68,9 +68,19 @@ h4 {
 h5, p, a {
   font-size: 1rem;
 }
+@media screen and (orientation: portrait) {
+  h5, p, a {
+    font-size: 2rem;
+  }
+}
 
 h6 {
   font-size: 0.7rem;
+}
+@media screen and (orientation: portrait) {
+  h6 {
+    font-size: 1.4rem;
+  }
 }
 
 input {
@@ -111,7 +121,12 @@ nav {
   position: fixed;
   z-index: 9999;
 }
-
+@media screen and (orientation: portrait) {
+  nav {
+    width: 98.6%;
+    height: 88px;
+  }
+}
 footer {
   width: 99.2%;
   height: 48px;
@@ -126,12 +141,23 @@ footer {
   color: rgb(255, 255, 255);
   z-index: 9999;
 }
+@media screen and (orientation: portrait) {
+  footer {
+    width: 98.6%;
+    height: 88px;
+  }
+}
 
 main {
   display: flex;
   padding-top: 54px;
   margin-bottom: 10px;
   justify-content: center;
+}
+@media screen and (orientation: portrait) {
+  main {
+    padding-top: 104px;
+  }
 }
 
 .title {
@@ -223,6 +249,11 @@ main {
   box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
   cursor: pointer;
 }
+@media screen and (orientation: portrait) {
+  .button {
+    font-size: 3rem;
+  }
+}
 .button:disabled {
   color: rgb(255, 255, 255);
 }
@@ -245,6 +276,11 @@ select:hover {
   background: linear-gradient(0deg, rgb(27, 60, 82) 0%, rgb(8, 26, 41) 100%);
   box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
   cursor: pointer;
+}
+@media screen and (orientation: portrait) {
+  select {
+    font-size: 3rem;
+  }
 }
 
 input {

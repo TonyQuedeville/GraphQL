@@ -49,6 +49,10 @@
     align-items: center 
     color: $white
 
+    +portrait
+        width: 98.6%
+        height: 88px
+
 @mixin input
     //width: 100%
     height: 30px
@@ -81,6 +85,9 @@
         background: $fondElementHoover
         box-shadow: $light
         cursor: pointer
+
+    +portrait
+        font-size: nth($mobilfontSizes, 3)
 
 @mixin rightPanel
     width: 23vw

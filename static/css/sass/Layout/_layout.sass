@@ -9,9 +9,8 @@ nav
     position: fixed
     z-index: 9999
 
-    // +medium
-
-    // +portrait
+    +portrait
+        
 
 footer
     @include navfoot
@@ -27,6 +26,9 @@ main
     justify-content: center
     //overflow-x: hidden
     //overflow-y: auto
+
+    +portrait
+        padding-top: 104px
 
 .title
     font-size: nth($fontSizes, 3)
@@ -97,6 +99,7 @@ main
 
     &:disabled
         color: $white
+
 
 select
     @include buttonSelect
